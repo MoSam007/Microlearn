@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 import Student from './models/student';
 import Course from './models/course';
 import students from './data/students.json';
@@ -7,6 +7,8 @@ import courses from './data/courses.json';
 import { ICourse } from './models/course';
 
 dotenv.config();  // Load environment variables
+
+console.log('MONGO_URI:', process.env.MONGO_URI);
 
 // Database connection
 const connectDB = async () => {
