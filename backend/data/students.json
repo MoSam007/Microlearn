@@ -1,0 +1,18 @@
+[
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "enrolledCourses": ["6428b2a1f29bfa001f6d12f3", "6428b2a1f29bfa001f6d12f4"]
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "enrolledCourses": ["6428b2a1f29bfa001f6d12f3"]
+    },
+    {
+      "name": "Samuel Green",
+      "email": "samuel.green@example.com",
+      "enrolledCourses": ["6428b2a1f29bfa001f6d12f4"]
+    }
+  ]
+  

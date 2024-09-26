@@ -1,0 +1,17 @@
+[
+    {
+      "_id": "6428b2a1f29bfa001f6d12f3",
+      "title": "Introduction to Robotics",
+      "description": "Learn the basics of robotics, including robot design, programming, and applications.",
+      "duration": "10 weeks",
+      "instructor": "Dr. Emily Carter"
+    },
+    {
+      "_id": "6428b2a1f29bfa001f6d12f4",
+      "title": "Advanced Programming",
+      "description": "An in-depth course covering advanced programming topics and best practices.",
+      "duration": "12 weeks",
+      "instructor": "Mr. John Williams"
+    }
+  ]
+  
