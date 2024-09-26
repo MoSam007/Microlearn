@@ -1,33 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import studentService from '../services/studentService';
+import { useEffect, useState } from 'react';
 
 interface Student {
-    _id: string;
-    name: string;
-    email: string;
+  _id: string;
+  name: string;
+  email: string;
+  enrolledCourses: string[];
 }
 
-const StudentList: React.FC = () => {
-    const [students, setStudents] = useState<Student[]>([]);
+export const StudentsList = () => {
+  const [students, setStudents] = useState<Student[]>([]);
 
-    useEffect(() => {
-        studentService.getAll().then(response => {
-            setStudents(response.data);
-        });
-    }, []);
+  useEffect(() => {
+    const fetchStudents = async () => {
+      try {
+        const response = await fetch('/api/students');
+        const data = await response.json();
+        setStudents(data);
+      } catch (error) {
+        console.error('Error fetching students:', error);
+      }
+    };
 
-    return (
-        <div className="container mx-auto p-4">
-            <h2 className="text-2xl font-bold">Students</h2>
-            <ul className="list-disc list-inside">
-                {students.map(student => (
-                    <li key={student._id} className="mt-2">
-                        {student.name} - {student.email}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+    fetchStudents();
+  }, []);
+
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-xl font-bold">Students List</h1>
+      <ul className="list-disc">
+        {students.map((student) => (
+          <li key={student._id}>{student.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
-export default StudentList;
+export default StudentsList;
