@@ -10,6 +10,8 @@ connectDB();
 const app = express();
 app.use(express.json());
 
+app.use('/uploads', express.static('uploads'));
+
 app.use('/api/students', studentRoutes);
 app.use('/api/courses', courseRoutes);
 
