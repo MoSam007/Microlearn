@@ -2,6 +2,7 @@ import React from 'react';
 import StudentList from './components/StudentList';
 import StudentForm from './components/StudentForm';
 
+const studentId = "233434"
 const App: React.FC = () => {
     return (
         <div>

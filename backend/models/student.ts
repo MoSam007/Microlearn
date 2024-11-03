@@ -11,7 +11,7 @@ const studentSchema: Schema = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     enrolledCourses: [{ type: Schema.Types.ObjectId, ref: 'Course' }],
-    image: {tyoe: String},
+    image: {type: String},
 }, { timestamps: true });
 
 export default mongoose.model<IStudent>('Student', studentSchema);
